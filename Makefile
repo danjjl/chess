@@ -1,3 +1,6 @@
+#pas oublier que pictures doit se trouver dans le dir de l'exec graphique (moi j'emploie ../relelease comme EXEC_DIR)
+EXEC_DIR = .
+
 #MAIN SOURCE
 SOURCE = main.cpp board.cpp colour.cpp coordinate.cpp piece.cpp ./pieces/bishop.cpp ./pieces/king.cpp ./pieces/knight.cpp ./pieces/pawn.cpp ./pieces/queen.cpp ./pieces/rook.cpp
 #AI
@@ -18,7 +21,7 @@ debug : $(SOURCE) $(TERMINAL) $(AI)
 	g++ $(WFLAGS) -g $(SOURCE) $(TERMINAL) $(AI) $(THREAD) -o chess
 
 chess : $(SOURCE) $(SDL) $(AI)
-	g++ $(SOURCE) $(SDL) $(AI) $(THREAD) -m64 $(LIB_SDL) $(OPTIMIZATION) -msse2 -o ../release/chess
+	g++ $(SOURCE) $(SDL) $(AI) $(THREAD) -m64 $(LIB_SDL) $(OPTIMIZATION) -msse2 -o (EXEC_DIR)/chess
 
 chesst : $(SOURCE) $(TERMINAL) $(AI)
-	g++ $(SOURCE) $(TERMINAL) $(AI) $(THREAD) -m64 $(OPTIMIZATION) -msse2 -o ../release/chesst
+	g++ $(SOURCE) $(TERMINAL) $(AI) $(THREAD) -m64 $(OPTIMIZATION) -msse2 -o (EXEC_DIR)/chesst
