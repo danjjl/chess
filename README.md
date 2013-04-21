@@ -1,12 +1,12 @@
 chess
 =====
 ###1. Compilation :
-- Compile sans librairie extérieur avec la commande `make chesst`.
+- Compile sans librairie extérieure avec la commande `make chesst`.
 - Compile avec la **SDL** (`libsdl1.2-dev`, `libsdl-image1.2-dev`) avec la commande `make chess`.
 
 ###2. Exécution :
 - L'exécutable peut être lancé en mode humain-humain (`./chess(t) h h`) ou ai-humain (`./chess(t) a h`)
-- L'affichage se fait soit dans un terminal (`./chesst`) ou dans une fenêtre SDL (`./chess`) (**Attention requiert** : `libsdl1.2`, `libsdl-image1.2`). Pour l'affichage graphique l'exécutable doit se trouver dans le même dossier que le dossier `pictures`.
+- L'affichage se fait soit dans un terminal (`./chesst`) ou dans une fenêtre SDL (`./chess`) ( **Attention requiert** : `libsdl1.2`, `libsdl-image1.2`). Pour l'affichage graphique l'exécutable doit se trouver dans le même dossier que le dossier `pictures`.
 
 ###3. Commentaires sur le Code :
 - `inputOuput/inputOuput.h` explique comment créer un nouveau rendu du jeu d'échec. C'est en travaillant sur ce template et sur `main.cpp` qu'il devrait être possible de jouer avec une autre AI qui est compilée séparément. Le top du top serait de rendre le renderer [Universal Chess Interface](https://en.wikipedia.org/wiki/Universal_Chess_Interface) compatible. Comme ça on pourrait jouer avec *n'importe* qu'elle AI (comme GNU Chess).
