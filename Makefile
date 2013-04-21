@@ -21,7 +21,7 @@ debug : $(SOURCE) $(TERMINAL) $(AI)
 	g++ $(WFLAGS) -g $(SOURCE) $(TERMINAL) $(AI) $(THREAD) -o chess
 
 chess : $(SOURCE) $(SDL) $(AI)
-	g++ $(SOURCE) $(SDL) $(AI) $(THREAD) -m64 $(LIB_SDL) $(OPTIMIZATION) -msse2 -o (EXEC_DIR)/chess
+	g++ $(SOURCE) $(SDL) $(AI) $(THREAD) $(LIB_SDL) $(OPTIMIZATION) -msse2 -o (EXEC_DIR)/chess
 
 chesst : $(SOURCE) $(TERMINAL) $(AI)
-	g++ $(SOURCE) $(TERMINAL) $(AI) $(THREAD) -m64 $(OPTIMIZATION) -msse2 -o (EXEC_DIR)/chesst
+	g++ $(SOURCE) $(TERMINAL) $(AI) $(THREAD) $(OPTIMIZATION) -msse2 -o (EXEC_DIR)/chesst
