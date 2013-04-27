@@ -1,10 +1,9 @@
 #include "boardState.h"
-//TODO I KILLED THE AI :(; BUG CAN'T PUT CHECKMATE (-> can't finish game (wonder why...))
 /*These values should be fine tuned to maximise AI efficency*/
 //Evaluation of a move is calulated +- Randomness
 #define RANDOMNESS 5
 //Minimum calculated moves in advance (Next time you play)
-#define MIN_PREVISION 2
+#define MIN_PREVISION 3
 //Minimum moves calculated (total off all possible moves)
 #define MIN_MOVES 10000
 
