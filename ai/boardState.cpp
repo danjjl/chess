@@ -4,7 +4,7 @@
 //Evaluation of a move is calulated +- Randomness
 #define RANDOMNESS 5
 //Minimum calculated moves in advance (Next time you play)
-#define MIN_PREVISION 2
+#define MIN_PREVISION 3
 //Minimum moves calculated (total off all possible moves)
 #define MIN_MOVES 10000
 
@@ -126,7 +126,7 @@ int BoardState::downLevel(int totalMoves, int numDown, Colour *colour)
 
 			for (unsigned int i = 0; i < m_numMoves; i++)
 			{
-				int tempVal = m_child[i]->downLevel(++totalMoves, numDown + 1, colour);//(Could deadlock in each player can only play one move (would never end))
+				int tempVal = m_child[i]->downLevel(totalMoves + 1, numDown + 1, colour);//(Could deadlock in each player can only play one move (would never end))
 				if((tempVal * m_sign) > (m_value * m_sign))
 					m_value = tempVal;
 			}

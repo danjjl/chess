@@ -1,7 +1,6 @@
 #ifndef DEF_IO
 #define DEF_IO
 
-//TODO EDIT COMMENT Only uncomment one off the the rendering inputs
 #if defined(INC_SDL)
 	#include "sdl/sdl.h"
 #endif
